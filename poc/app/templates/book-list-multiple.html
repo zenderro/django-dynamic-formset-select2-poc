@@ -47,8 +47,9 @@
                     formTemplate: $('#formset-template-{{ forloop.counter }}').clone(),
                     // initialize newly created heavy fields on the added callback
                     added: function (row) {
-                        row.find('.django-select2').djangoSelect2();
-                    }
+                      row.find('.django-select2').djangoSelect2();
+                    },
+                    prefix: "{{ formset.prefix }}"
                 });
             {% endfor %}
         }());

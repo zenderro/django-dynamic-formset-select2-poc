@@ -7,6 +7,7 @@ class BookSelect2Widget(ModelSelect2Widget):
     search_fields = [
         'title__icontains',
     ]
+    queryset = Book.objects.all()
 
 
 class BooksForm(forms.Form):
